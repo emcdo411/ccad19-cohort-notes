@@ -89,10 +89,30 @@ If you're new to Git or GitHub, use this as your **starter guide**.
 
 ---
 
-Would you like me to:
+### 🔄 GitHub Enterprise Multi-Repo Migration Steps
 
-* Add GitHub Actions YAML for .NET CI/CD?
-* Include a `.gitignore` file tailored for C# and Docker?
-* Create a markdown printable version of the cheat sheet?
+If you're migrating several GitHub repositories to GitHub Enterprise, here’s a clear overview of the process:
 
-Just say the word, and I’ll get it ready.
+#### ✅ Step-by-Step Migration Workflow
+
+| Step | Action                                                                                                        |
+| ---- | ------------------------------------------------------------------------------------------------------------- |
+| 1️⃣  | **Pre-Migration Audit**: List all repos, teams, permissions, secrets, CI/CD integrations.                     |
+| 2️⃣  | **Set up the destination org** in GitHub Enterprise (Cloud or Server).                                        |
+| 3️⃣  | **Create personal access tokens** with admin rights on source and target.                                     |
+| 4️⃣  | Clone all repos with full history using mirror: <br> `git clone --mirror https://github.com/old-org/repo.git` |
+| 5️⃣  | Push each mirror to the new org: <br> `git push --mirror https://github.com/new-org/repo.git`                 |
+| 6️⃣  | Rebuild repo settings (branches, webhooks, deploy keys, Actions secrets).                                     |
+| 7️⃣  | Recreate team structures using the **GitHub REST API or CLI scripting**.                                      |
+| 8️⃣  | Test everything — Actions pipelines, integrations, SSO logins.                                                |
+| 9️⃣  | **Lock old repos** (read-only) and notify users.                                                              |
+| 🔟   | Monitor logs and access patterns post-migration.                                                              |
+
+#### 🛠️ Recommended Tools
+
+* GitHub CLI (`gh`) for repo creation and permissions
+* REST or GraphQL API for automation
+* Bash or PowerShell scripting for bulk operations
+* GitHub Enterprise Importer or `ghe-migrator` (for GHES)
+
+---
