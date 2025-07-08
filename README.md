@@ -96,6 +96,53 @@ ENTRYPOINT ["dotnet", "MyApp.dll"]
 
 ### 📜 Beginner Git Cheat Sheet (for MSSA Devs)
 
+---
+
+### 🗺️ Visual Git Workflow with Mermaid
+
+```mermaid
+graph TD
+  A[Start Development] --> B[Create Feature Branch]
+  B --> C[Write Code]
+  C --> D[Stage Changes]
+  D --> E[Commit Changes]
+  E --> F[Push to GitHub]
+  F --> G[Open Pull Request]
+  G --> H[Code Review / CI Pipeline]
+  H --> I[Merge to Main]
+  I --> J[Delete Feature Branch]
+```
+
+> 📌 This modern Git workflow helps maintain clean commit history and integrates easily with GitHub Actions CI/CD and PR review pipelines.
+
+---
+
+---
+
+### 🧭 How to Use Git Commands from VS Code GUI
+
+If you prefer to avoid memorizing terminal commands, you can manage Git entirely within Visual Studio Code’s interface:
+
+| CLI Command                     | VS Code GUI Action                                                               |
+| ------------------------------- | -------------------------------------------------------------------------------- |
+| `git init`                      | Open folder > Source Control panel > Click “Initialize Repository”               |
+| `git add .` / `git add <file>`  | Click `+` next to changed files to **stage** them in Source Control panel        |
+| `git commit -m "msg"`           | Type your message in the input box > click ✔️ to commit                          |
+| `git status`                    | View staged/unstaged/modified files in Source Control panel                      |
+| `git log` / `git log --oneline` | Use GitLens or Git Graph to view commit history visually                         |
+| `git push`                      | Click the cloud icon (bottom left) or use “Sync Changes” in Source Control panel |
+| `git pull`                      | Same cloud icon menu or use `Cmd/Ctrl + Shift + P` > “Git: Pull”                 |
+| `git reset --soft HEAD~1`       | Use **GitLens** extension > “Undo Last Commit (Soft)” from its command menu      |
+
+#### 🔧 Recommended VS Code Extensions
+
+* **GitLens** – See commit history, blame, and advanced reset options
+* **GitHub Pull Requests and Issues** – View PRs and issues inside VS Code
+
+> 🧠 Bonus Tip: You can even use GitHub Copilot to write commit messages or `.gitignore` files inside VS Code.
+
+---
+
 | 🔧 Action                   | 🧪 Git Command Example                       | 💬 What It Does                                     |
 | --------------------------- | -------------------------------------------- | --------------------------------------------------- |
 | ✅ Initialize Git            | `git init`                                   | Starts tracking your project with Git locally       |
