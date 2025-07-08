@@ -53,16 +53,38 @@ ENTRYPOINT ["dotnet", "MyApp.dll"]
 
 ### 🛠 Tools Used
 
-[![C# / .NET](https://img.shields.io/badge/C%23%20%2F%20.NET-512BD4?logo=dotnet\&logoColor=white)](#)
-[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker\&logoColor=white)](#)
-[![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?logo=visualstudiocode\&logoColor=white)](#)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github\&logoColor=white)](#)
-Role                    |
-\| --------------------- | ----------------------- |
-\| 🧱 **C# / .NET**      | Language + Framework    |
-\| 🐳 **Docker**         | Containerized runtime   |
-\| 🧪 **VS Code + MSSA** | Dev environment         |
-\| 🔙 **GitHub + Git**   | Version control & CI/CD |
+#### 🧱 C# / .NET
+
+[![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge\&logo=dotnet\&logoColor=white)](#)
+
+> Role: Language + Framework
+
+#### 🐳 Docker
+
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge\&logo=docker\&logoColor=white)](#)
+
+> Role: Containerized runtime
+
+#### 🧪 VS Code + MSSA
+
+[![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge\&logo=visualstudiocode\&logoColor=white)](#)
+
+> Role: Dev environment
+
+#### 🔙 GitHub + Git
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)](#)
+
+> Role: Version control & CI/CD
+> \| 🧱 **C# / .NET**   | Language + Framework         |
+> \| 🐳 **Docker**      | Containerized runtime        |
+> \| 🧪 **VS Code + MSSA** | Dev environment             |
+> \| 🔙 **GitHub + Git**| Version control & CI/CD      |
+> \| --------------------- | ----------------------- |
+> \| 🧱 **C# / .NET**      | Language + Framework    |
+> \| 🐳 **Docker**         | Containerized runtime   |
+> \| 🧪 **VS Code + MSSA** | Dev environment         |
+> \| 🔙 **GitHub + Git**   | Version control & CI/CD |
 
 ---
 
@@ -319,4 +341,5 @@ Would you like me to:
 * Create a markdown printable version of the cheat sheet?
 
 Just say the word, and I’ll get it ready.
+
 
