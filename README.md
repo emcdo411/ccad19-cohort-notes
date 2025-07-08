@@ -68,22 +68,48 @@ ENTRYPOINT ["dotnet", "MyApp.dll"]
 
 ---
 
-### 📜 Beginner Git Cheat Sheet (for MSSA Devs)
+### 📜 Beginner Git Cheat Sheet (for MSSA Devs)\$1
 
-If you're new to Git or GitHub, use this as your **starter guide**.
+---
 
-| 🔧 Action                   | 🧪 Git Command Example                       | 💬 What It Does                                     |
-| --------------------------- | -------------------------------------------- | --------------------------------------------------- |
-| ✅ Initialize Git            | `git init`                                   | Starts tracking your project with Git locally       |
-| 📅 Clone a repo from GitHub | `git clone https://github.com/user/repo.git` | Downloads a copy of a remote GitHub project         |
-| ➕ Stage changes             | `git add .` or `git add MyFile.cs`           | Prepares changes to be committed                    |
-| 📂 Commit changes           | `git commit -m "Add login feature"`          | Saves a version snapshot with a message             |
-| 🚀 Push to GitHub           | `git push origin main`                       | Uploads your local commits to GitHub                |
-| 🔄 Pull from GitHub         | `git pull origin main`                       | Gets the latest changes from the remote GitHub repo |
-| 🔍 Check status             | `git status`                                 | Shows which files have been changed or staged       |
-| 📜 View commit history      | `git log --oneline`                          | Displays a clean list of past commits               |
-| ✨ Create a new branch       | `git checkout -b feature/new-ui`             | Starts a new branch for isolated development        |
-| ↺ Merge a branch            | `git merge feature/new-ui`                   | Combines a branch into the current one              |
+### 🧩 Can You Run Git Reset from GitHub Web UI?
+
+While GitHub’s front end is user-friendly, it doesn’t support all command-line features like `git reset --soft` directly. However, here’s what you *can* and *can’t* do:
+
+#### ✅ GitHub Web Features That Overlap with Git CLI
+
+| Feature                       | What It Does                              | CLI Equivalent         |
+| ----------------------------- | ----------------------------------------- | ---------------------- |
+| ✅ Revert a commit             | Undoes a commit with a new one            | `git revert`           |
+| 🗑️ Delete a file via UI      | Opens a PR to remove a file               | `git rm`, `git commit` |
+| 🔄 Rebase/squash via PR       | Allows rewriting history before merge     | `git rebase -i`        |
+| ✍️ Edit commit messages in PR | Adjust messages when squashing or merging | `git commit --amend`   |
+
+#### ❌ Limitations in the GitHub Web UI
+
+* `git reset --soft`, `--mixed`, or `--hard` not supported
+* No ability to rewire `HEAD` or move branch pointers
+* Cannot selectively stage changes from UI like with `git add -p`
+
+#### ✅ Alternatives for Non-Terminal Users
+
+| Tool              | Benefit                                                 |
+| ----------------- | ------------------------------------------------------- |
+| GitHub Desktop    | Visual history, undo, discard changes                   |
+| GitKraken         | GUI-based Git with partial reset & rebase functionality |
+| VS Code + GitLens | Interactive staging, commit viewer, timeline controls   |
+
+> 💡 Pro Tip: If you need the behavior of `git reset --soft` in a visual way, GitHub Desktop or GitLens inside VS Code are your best bet.------------------------ | -------------------------------------------- | --------------------------------------------------- |
+> \| ✅ Initialize Git            | `git init`                                   | Starts tracking your project with Git locally       |
+> \| 📅 Clone a repo from GitHub | `git clone https://github.com/user/repo.git` | Downloads a copy of a remote GitHub project         |
+> \| ➕ Stage changes             | `git add .` or `git add MyFile.cs`           | Prepares changes to be committed                    |
+> \| 📂 Commit changes           | `git commit -m "Add login feature"`          | Saves a version snapshot with a message             |
+> \| 🚀 Push to GitHub           | `git push origin main`                       | Uploads your local commits to GitHub                |
+> \| 🔄 Pull from GitHub         | `git pull origin main`                       | Gets the latest changes from the remote GitHub repo |
+> \| 🔍 Check status             | `git status`                                 | Shows which files have been changed or staged       |
+> \| 📜 View commit history      | `git log --oneline`                          | Displays a clean list of past commits               |
+> \| ✨ Create a new branch       | `git checkout -b feature/new-ui`             | Starts a new branch for isolated development        |
+> \| ↺ Merge a branch            | `git merge feature/new-ui`                   | Combines a branch into the current one              |
 
 > 👇 Pro Tip: Always commit small and often. It's easier to track and rollback changes if needed.
 
@@ -116,3 +142,11 @@ If you're migrating several GitHub repositories to GitHub Enterprise, here’s a
 * GitHub Enterprise Importer or `ghe-migrator` (for GHES)
 
 ---
+
+Would you like me to:
+
+* Add GitHub Actions YAML for .NET CI/CD?
+* Include a `.gitignore` file tailored for C# and Docker?
+* Create a markdown printable version of the cheat sheet?
+
+Just say the word, and I’ll get it ready.
