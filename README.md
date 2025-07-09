@@ -482,9 +482,9 @@ flowchart LR
     MainBranch -->|Push| ProdEnv[Production Environment]
 
 
-## 🔀 What Is a **Fork**?
+What Is a **Fork**?
 
-### 📌 Definition:
+Definition:
 
 A **fork** is a **copy of an entire repository** (including its full history) that lives under **your own GitHub account**.
 
@@ -598,9 +598,7 @@ git push origin main
 | **Branch** | Line of development | Add feature, fix bug       | Inside one repo | `git checkout -b branchname` |
 | **Merge**  | Combine branches    | Finalize feature, release  | Any Git repo    | `git merge branchname`       |
 
----
-
-## 🧭 Visual Workflow (Optional Mermaid)
+🧭 Visual Workflow (Optional Mermaid)
 
 ```mermaid
 graph TD
