@@ -475,20 +475,14 @@ on:
 
 ```mermaid
 ### 📈 Visual Summary (Optional Mermaid Flow)
-
-```mermaid
 flowchart LR
     DevBranch[Dev Branch] -->|Push| DevEnv[Development Environment]
     DevBranch -->|Merge| StagingBranch[Staging Branch]
     StagingBranch -->|Push| QAEnv[QA/Staging Environment]
     StagingBranch -->|Merge| MainBranch[Main Branch]
     MainBranch -->|Push| ProdEnv[Production Environment]
----
-
-Would you like a full example YAML that runs test/deploy workflows across all 3 environments with secrets and manual approvals?
-
-
 
 ---
+
 
 
