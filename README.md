@@ -476,9 +476,11 @@ on:
 ```mermaid
 
 flowchart LR
-  DevBranch[Dev Branch] -->|Push| DevEnv[Development Environment]
-  StagingBranch[Staging Branch] -->|Push| QAEnv[QA / Staging Environment]
-  MainBranch[Main Branch] -->|Push| ProdEnv[Production Environment]
+    DevBranch[Dev Branch] -->|Push| DevEnv[Development Environment]
+    DevBranch -->|Merge| StagingBranch[Staging Branch]
+    StagingBranch -->|Push| QAEnv[QA/Staging Environment]
+    StagingBranch -->|Merge| MainBranch[Main Branch]
+    MainBranch -->|Push| ProdEnv[Production Environment]
 
 ## 🛠 Admin Tips:
 
