@@ -474,20 +474,15 @@ on:
 ## 📈 Visual Summary (Optional Mermaid Flow)
 
 ```mermaid
+### 📈 Visual Summary (Optional Mermaid Flow)
 
+```mermaid
 flowchart LR
     DevBranch[Dev Branch] -->|Push| DevEnv[Development Environment]
     DevBranch -->|Merge| StagingBranch[Staging Branch]
     StagingBranch -->|Push| QAEnv[QA/Staging Environment]
     StagingBranch -->|Merge| MainBranch[Main Branch]
     MainBranch -->|Push| ProdEnv[Production Environment]
-
-## 🛠 Admin Tips:
-
-* Use **`environments:`** in your YAML to enforce separation.
-* Protect `main` branch using **branch protection rules** + **required reviews**.
-* Pair with **GitHub Deployments API** for richer deployment tracking.
-
 ---
 
 Would you like a full example YAML that runs test/deploy workflows across all 3 environments with secrets and manual approvals?
