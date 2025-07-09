@@ -479,7 +479,6 @@ flowchart LR
   StagingBranch[Staging Branch] -->|Push| QAEnv[QA / Staging Environment]
   MainBranch[Main Branch] -->|Push| ProdEnv[Production Environment]
 
-
 ## 🛠 Admin Tips:
 
 * Use **`environments:`** in your YAML to enforce separation.
