@@ -474,7 +474,6 @@ on:
 ## 📈 Visual Summary (Optional Mermaid Flow)
 
 ```mermaid
-### 📈 Visual Summary (Optional Mermaid Flow)
 flowchart LR
     DevBranch[Dev Branch] -->|Push| DevEnv[Development Environment]
     DevBranch -->|Merge| StagingBranch[Staging Branch]
