@@ -481,7 +481,5 @@ flowchart LR
     StagingBranch -->|Merge| MainBranch[Main Branch]
     MainBranch -->|Push| ProdEnv[Production Environment]
 
----
-
 
 
