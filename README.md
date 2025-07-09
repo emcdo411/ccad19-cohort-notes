@@ -481,9 +481,6 @@ flowchart LR
     StagingBranch -->|Merge| MainBranch[Main Branch]
     MainBranch -->|Push| ProdEnv[Production Environment]
 
-Here’s a **clear, practical breakdown** of the key differences between a **fork**, **branch**, and **merge** in GitHub — including **when to use each**, real-world examples, and relevant commands.
-
----
 
 ## 🔀 What Is a **Fork**?
 
